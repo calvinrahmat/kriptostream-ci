@@ -22,6 +22,7 @@ jobs:
           JF_URL: https://trialyo541m.jfrog.io
         with:
           oidc-provider-name: krypto-data-github-oidc
+          oidc-audience: krypto-data-github-oidc
 
       - name: Create dummy DLT manifest artifact
         run: echo "KriptoStream DLT manifest - $(date -u)" > dlt-manifest.txt
