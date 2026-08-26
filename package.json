@@ -1,0 +1,8 @@
+{
+  "name": "kriptostream-ci",
+  "version": "1.0.0",
+  "description": "KriptoStream CI/CD governance demo",
+  "dependencies": {
+    "lodash": "4.17.11"
+  }
+}
