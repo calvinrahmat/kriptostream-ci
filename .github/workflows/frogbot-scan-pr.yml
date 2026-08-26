@@ -11,6 +11,7 @@ permissions:
 jobs:
   scan-pull-request:
     runs-on: ubuntu-latest
+    environment: frogbot
     env:
       JF_URL: ${{ secrets.JF_URL }}
       JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
