@@ -1,0 +1,25 @@
+name: "Frogbot Scan Pull Request (KriptoStream)"
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  scan-pull-request:
+    runs-on: ubuntu-latest
+    env:
+      JF_URL: ${{ secrets.JF_URL }}
+      JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
+      JF_GIT_TOKEN: ${{ secrets.JF_GIT_TOKEN }}
+      # Links this scan to the project-scoped governance gate from Lab 1/4:
+      # any High/Critical violation matched by this watch's policy fails
+      # the check and blocks merge, enforcing DLTC-01 at PR review time.
+      JF_WATCHES: "krypto-data-dev-watch"
+      JF_FAIL: "true"
+    steps:
+      - name: Frogbot Scan
+        uses: jfrog/frogbot@v2
