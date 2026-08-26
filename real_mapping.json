@@ -1,0 +1,13 @@
+{
+  "name": "krypto-data-gh-mapping",
+  "priority": 1,
+  "claims": {
+    "repository": "calvinrahmat/kriptostream-ci"
+  },
+  "token_spec": {
+    "username": "krypto-data-gh-ci",
+    "scope": "applied-permissions/roles:krypto-data:\"Developer\"",
+    "audience": "*@*",
+    "expires_in": 600
+  }
+}

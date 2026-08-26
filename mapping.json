@@ -1,0 +1,10 @@
+{
+  "name": "test-mapping",
+  "claims_json": "{\"repository\": \"calvinrahmat/kriptostream-ci\"}",
+  "token_spec": {
+    "username": "test-user",
+    "scope": "applied-permissions/user",
+    "audience": "*@*",
+    "expires_in": 600
+  }
+}
